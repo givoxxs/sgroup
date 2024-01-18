@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Completed Guide to Flexbox in CSS(Phần 1)</title>
+    <style>
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 31.5px;
+        }
+        p, li {
+            font-size: 18px; 
+        }
+        code {
+            font-size: 16px;
+            color: #1B1B1B;
+            background-color: #EEEEEE;
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://images.viblo.asia/full/2ea73483-c88e-4a1e-bcf5-d889a15998a8.png" width="1140" height="168" alt="">
+    </div>
+    <div class="post-content">
+        <h1>A Completed Guide to Flexbox in CSS (Phần 1)</h1>
+
+        <p>Hôm nay mình sẽ giới thiệu với các bạn những tính năng cần biết trong Flexbox của CSS. 
+            Vì Flexbox có khá nhiều tính năng hay ho nên mình sẽ tách ra ít nhất là 2 phần để có thể giới thiệu một cách đầy đủ ! </p>
+        <!-- I, Một vài thuật ngữ -->
+        <h2>I, Một vài thuật ngữ</h2>
+        <p> Bởi vì Flexbox là cả một module trong CSS chứ không phải chỉ là một thuộc tính, do đó nó có chứa hàng tá các thuật ngữ riêng, 
+            ta hãy tìm hiểu qua một chút trước khi đi vào các tính năng của Flexbox nhé. </p>
+        <p> Nếu như với layout bình thường của CSS, việc hiển thị của các elements sẽ được dựa trên block và inline flow directions, 
+            thì trong flex layout chúng ta sử dụng "flex-flow directions". Các bạn hãy quan sát ảnh dưới:</p>
+        <img src="https://images.viblo.asia/cbfd1fde-582c-4d2c-b2ed-56a44b1e4994.png" width="700" height="328" alt="">
+        <p> Nào hãy cùng giải thích từng khái niệm nhé:</p>
+        <ul>
+            <li><strong>Flex container:</strong>Là một element được cài đặt thuộc tính <code>display: flex /* hoặc inline-flex */</code>
+                . Đây sẽ là môi trường chứa các phần tử khác cần được hiển thị theo Flexbox. </li>
+            <li><strong>Flex item:</strong>Các phần tử con của container được gọi là item, ở item bạn có thể thiết lập nó sẽ sử dụng bao nhiêu 
+                cột trong một container, hoặc thiết lập thứ tự hiển thị của nó.</li>
+        </ul>
+        <p>Đó là hai khái niệm chính, bây giờ chúng ta sẽ xem qua một vài khái niệm khác nhé:</p>
+        <ul>
+            <li><strong>main axis</strong> - Đây là trục mà các item sẽ hiển thị khi nằm trong container. Nó không nhất thiết phải theo chiều ngang như trên hình vẽ 
+                (đấy chỉ là mình lấy ví dụ thế), chúng ta có thể thay đổi được hướng của main-axis.</li>
+            <li><strong>main-start | main-end</strong> - Đây là 2 điểm bắt đầu và kết thúc của trục main.
+                main size - Bạn có thể hiểu đơn giản là kích thước (chiều rộng hoặc dọc) của mỗi item dựa theo trục main axis.</li>
+            <li><strong>cross axis</strong> - Đây là chiều vuông góc với trục main, direction của nó phụ thuộc hoàn toàn vào việc bạn cài đặt direction của trục main như thế nào. </li>
+            <li><strong>cross axis</strong>- Đây là chiều vuông góc với trục main, direction của nó phụ thuộc hoàn toàn vào việc bạn cài đặt direction của trục main như thế nào.</li>
+            <li><strong>cross-start | cross-end</strong>- Đây là 2 điểm bắt đầu và kết thúc của trục cross.</li>
+            <li><strong>cross size</strong>- Kích thước (chiều rộng hoặc dọc) của mỗi item dựa theo trục cross.</li>
+        </ul>
+        <!-- II. Các thuộc tính dành cho flex container -->
+        <h2>II, Các thuộc tính dành cho flex container</h2>
+        <!-- 1. display -->
+        <h3>1, display</h3>
+        <p>Đây đơn giản là thuộc tính display trong CSS thôi. Cũng như Block, Inline hay Inline-block, 
+            ta tạo ra một flex container bằng cách thiết lập cho 1 element thuộc tính này có giá trị như sau:</p>
+        <code>
+            .container { <br>
+                display: flex; /* or inline-flex */ <br>
+          }
+        </code>
+        <!-- 2.flex direction -->
+        <h3>2, flex-direction</h3>
+        <img src="https://images.viblo.asia/4129cabc-a5c7-4e14-ae31-8216e6ef6916.png" width="700" height="321" alt="">
+        <p>Đây chính là thuộc tính sẽ giúp điều chỉnh hướng của main-axis (cũng chính là hướng mà các item sẽ hiển thị). 
+            Flexbox là một single-direction layout concept, vậy nên các item sẽ chỉ được hiển thị theo 1 trong 2 kiểu đó là ngang hoặc dọc.</p>
+        <code>
+            .container { <br>
+                flex-direction: row | row-reverse | column | column-reverse; <br>
+              }
+        </code>
+        <ul>
+            <li><code>row</code>  (kiểu mặc định): Các item được sắp xếp theo chiều ngang, từ trái sang phải. </li>
+            <li><code>row-reverse</code> : Các item được sắp xếp theo chiều ngang, từ phải sang trái.</li>
+            <li><code>column</code>: Các item được sắp xếp theo chiều dọc, từ trên xuống dưới.</li>
+            <li><code>column-reverse</code> : Các item được sắp xếp theo chiều dọc, từ dưới lên trên.</li>
+        </ul>
+        <!-- 3, flex-wrap -->
+        <h3>3, flex-wrap</h3>
+        <img src="https://images.viblo.asia/e1464e5c-18b6-4c76-8da0-399a69aa4590.png" width="700" height="364" alt="">
+        <p>Mặc định thì các flex item sẽ luôn nằm trên 1 dòng, ta có thể thay đổi điều này dựa trên thuộc tính flex-wrap.</p>
+        <code>
+            .container{ <br>
+                flex-wrap: nowrap | wrap | wrap-reverse; <br>
+              }
+        </code>
+        <ul>
+            <li><code>nowrap</code> (default): Các flex item sẽ luôn nằm trên 1 dòng</li>
+            <li><code>wrap</code>: Các flex item sẽ nằm trên nhiều dòng, từ trên xuống dưới</li>
+            <li><code>wrap-reverse</code>: Các flex item sẽ nằm trên nhiều dòng, từ dưới lên trên</li>
+        </ul>
+        <!-- 4, justify-content -->
+        <h3>4, justify-content</h3>
+        <img src="https://images.viblo.asia/26b70b28-1b8c-4ea1-b2b5-49e549566070.png" width="700" height="683" alt="">
+        <p>Đây là cách mà các item sắp xếp cách hiển thị trong container.</p>
+        <code>
+            .container { <br>
+                justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; <br>
+              }
+        </code>
+        <ul>
+            <li><code>flex-start</code> (default): Các item được "căn lề trái"</li>
+            <li><code>flex-end</code>: Các item được "căn lề phải"</li>
+            <li><code>center</code>: Các item được "căn giữa"</li>
+            <li><code>space-between</code>: Các item được phân phối khoảng cách ngang nhau trên dòng. Item đầu tiên được gắn chặt vào main start và item cuối cùng được gắn chặt vào main end</li>
+            <li><code>space-around</code>: Tương tự như space-between tuy nhiên item đầu tiên và cuối cùng "cách lề" một khoảng bằng <strong>nửa</strong> khoảng cách giữa các item</li>
+            <li><code>space-evenly</code>: Tương tự như space-around tuy nhiên item đầu tiên và cuối cùng "cách lề" một khoảng bằng khoảng cách giữa các item</li>
+        </ul>
+        <!-- 5, align-items -->
+        <h3>5, align-items</h3>
+        <img src="https://images.viblo.asia/793009f7-e87b-4ec9-9bb7-7523229a89dd.png" width="700" height="683" alt="">
+        <p>Có thể coi đây là <code>justify-content</code> phiên bản dành cho cross-axis.</p>
+        <code>
+            .container { <br>
+                align-items: stretch | flex-start | flex-end | center | baseline; <br>
+              }
+        </code>
+        <ul>
+            <li><code>stretch</code> (default): Các item sẽ co giãn để "fill" đầy container (vẫn tuân theo max-width/min-width)</li>
+            <li><code>flex-start</code>: Có thể coi là "căn lề trên"</li>
+            <li><code>flex-end</code>: Đây là "căn lề dưới"</li>
+            <li><code>center</code>: Các item nằm giữa container</li>
+            <li><code>baseline</code>: Các item được sắp xếp theo baseline của chúng.</li>
+        </ul>
+        <!-- 6, align-content -->
+        <h3>6, align-content</h3>
+        <img src="https://images.viblo.asia/51a0934c-0204-4892-a771-1040ebe64838.png" width="700" height="683" alt="">
+        <p>Nếu như <code>align-items</code> là <code>justify-content</code> phiên bản cross-axis dành cho các item nằm trên 1 dòng, thì <code>align-content</code> là phiên bản dành cho các dòng.</p>
+        <code>
+            .container { <br>
+                align-content: flex-start | flex-end | center | space-between | space-around | stretch; <br>
+              }              
+        </code>
+        <ul>
+            <li><code>flex-start</code>: Các dòng được "căn lề trên"</li>
+            <li><code>flex-end</code>: Các dòng được "căn lề dưới"</li>
+            <li><code>center</code>: Các dòng được "căn giữa"</li>
+            <li><code>space-between</code>: Tương tự phần <code>justify-content</code> nhưng theo trục cross</li>
+            <li><code>space-around</code>: <em>Như trên</em></li>
+            <li><code>stretch</code> (default): Các dòng được kéo giãn để fill đầy các khoảng trống</li>
+        </ul>
+        <!-- III. Tạm kết -->
+        <h2>III, Tạm kết</h2>
+        <p>Trong bài này ta đã đi qua được các thuộc tính cần thiết dành cho flex container, bài sau chúng ta sẽ cùng tìm hiểu về các thuộc tính dành cho flex item nhé !</p>
+        <p><strong>Nguồn:</strong></p>
+        <ol>
+            <li><a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">https://www.w3schools.com/css/css3_flexbox.asp</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></li>
+        </ol>
+
+        <div>
+            <a href="https://viblo.asia/tags/front-end">Front-end</a>
+            <a href="https://viblo.asia/tags/css">CSS</a>
+        </div>
+        <p><em>All rights reserved</em></p>
+    </div>
+
+    <a href=""></a>
+</body>
+</html>
