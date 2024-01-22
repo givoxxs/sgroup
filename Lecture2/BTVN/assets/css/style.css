@@ -1,0 +1,224 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+/* 
+1. Từ trong vào ngoài
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông....)
+*/
+
+#main {
+    padding: 0 16%;
+    width: 100%;
+}
+/* HEADER */
+#header {
+    display: block;
+    top: 0;
+    z-index: 5;
+    height: 180px;
+    width: 100%;
+    background-color: #fff;
+    padding: 70px 0;
+    font-size: 18px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.header-inner {
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 5px 0; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.header-inner .header_logo {
+    display: flex;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 3px;
+    align-items: center;
+} 
+
+.header_logo span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px; 
+    color: #FFF;
+    background-color: #000; 
+    border-radius: 4px;  
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.header-inner span:hover {
+    opacity: 0.7;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+#header .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 15px;
+}
+
+#header .social a {
+    display: flex;
+    color: #F26464;
+    margin-left: 13px;
+    border-radius: 100%;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#header .social a:hover {
+    color: black;
+    opacity: 0.9;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+/* BANNER */
+#banner {
+    
+}
+
+#banner .profile {
+    display: flex;
+}
+
+.profile .image img{
+    width: 526px;
+}
+
+.profile .quickview {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 30px; */
+    padding-left: 100px; 
+    padding-right: 100px;
+}
+
+.profile .quickview p {
+    letter-spacing: 1px;  
+    font-weight: 500; 
+    font-size: 16px; 
+    padding-bottom: 30px; 
+}
+
+.profile .quickview h1 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 600;
+    color: #000;
+}
+
+.profile .exp {
+    display: flex;
+    margin-top: 63px;
+    /* margin-left: -30px; */
+    /* margin-right: 60px; */
+    justify-content: space-between;
+    padding-right: 60px;
+    font-weight: bold;
+    margin-right: 100px;
+}
+
+.profile .exp strong {
+    display: block; 
+    color: #F26464; 
+    font-size: 36px; 
+    font-weight: 800;
+    letter-spacing: 1px; 
+    margin-bottom: 7px;
+}
+
+.profile .exp p {
+    font-size: 16px; 
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+.sub_heading {
+    display: inline-block;
+    font-weight: 700px;
+    border-bottom: 3px solid #F26464;
+    font-size: 16px;
+    margin-bottom: 23px;
+    padding-bottom: 7px;
+    letter-spacing: 1px;
+    color: #000;
+}
+#content {
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+/* About section */
+.about-section p {
+    font-size: 24px;
+    color: #373737;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.about-section .button_about {
+    text-align: center;
+}
+
+.about-section a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #F26464;
+    text-align: center;
+    padding: 17px 30px;
+    border: 3px solid #F26464;
+    border-radius: 60px;
+}
+
+
+.about-section a:hover {
+    color: #fff;
+    background-color: #F26464;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+/* Skills */
+.skill {
+    display: flex;
+    margin-top: 120px;
+}
+
+.core {
+    width: 100%;
+    display: flex;
+    
+}
+#footer {
+    height: 5000px;
+    background-color: #ccc;
+}
+

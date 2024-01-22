@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: red;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.box_auto {
+    margin-left: 40px;
+    background-color: gray;
+    border: 1px dotted black;   
+    margin-bottom: 10px;
+}
+ 
+.box1, .box3 {
+    width: 240px;
+    height: 20px;   
+}
+
+.box1 {
+    margin-top:18px;
+}
+
+.box2 {
+    width: 35px;
+    height: 20px;
+    display: block;
+}
+.sub_box {
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    display: inline-block;
+}
+  
