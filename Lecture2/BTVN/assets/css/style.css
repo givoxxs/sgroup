@@ -212,11 +212,30 @@
     margin-top: 120px;
 }
 
-.core {
+.col {
     width: 100%;
-    display: flex;
-    
+    display: block;
 }
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.skills-list li {
+    display: inline-block;
+    color: #373737;
+    font-size: 16px;
+    background-color: #fff;
+    margin: 0 15px 15px 0;
+    padding: 10px 20px;
+    border: 1px solid #D7D7D7;
+    border-radius: 60px;
+}
+/* Work experience */
 #footer {
     height: 5000px;
     background-color: #ccc;
