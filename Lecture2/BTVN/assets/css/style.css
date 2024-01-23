@@ -25,17 +25,15 @@
 /* HEADER */
 #header {
     display: block;
-    top: 0;
-    z-index: 5;
     height: 180px;
     width: 100%;
     background-color: #fff;
     padding: 70px 0;
     font-size: 18px;
-    transition-delay: 0s;
+    /* transition-delay: 0s;
     transition-duration: 0.4s;
     transition-property: all;
-    transition-timing-function: ease;
+    transition-timing-function: ease; */
 }
 
 .header-inner {
@@ -83,7 +81,7 @@
     margin-right: 15px;
 }
 
-#header .social a {
+#header .social a,i {
     display: flex;
     color: #F26464;
     margin-left: 13px;
@@ -93,12 +91,14 @@
     justify-content: space-around;
 }
 
-#header .social a:hover {
+#header .social a:hover,
+#header .social a i:hover {
     color: black;
     opacity: 0.9;
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
+
 /* BANNER */
 #banner {
     
@@ -174,7 +174,7 @@
     margin-bottom: 120px;
 }
 /* About section */
- p {
+.about-section {
     font-size: 24px;
     color: #373737;
     line-height: 40px;
@@ -184,6 +184,7 @@
 
 .about-section .button_about {
     text-align: center;
+    margin-top: 30px;
 }
 
 .button_about a {
@@ -282,7 +283,6 @@
 }
 
 .work_exp ul {
-    padding-top: 10px;
     list-style: none;
 }
 
