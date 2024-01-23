@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    color: #373737;
 }
 /* 
 1. Từ trong vào ngoài
@@ -173,7 +174,7 @@
     margin-bottom: 120px;
 }
 /* About section */
-.about-section p {
+ p {
     font-size: 24px;
     color: #373737;
     line-height: 40px;
@@ -185,7 +186,7 @@
     text-align: center;
 }
 
-.about-section a {
+.button_about a {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
@@ -200,7 +201,7 @@
 }
 
 
-.about-section a:hover {
+.button_about a:hover {
     color: #fff;
     background-color: #F26464;
     transition-duration: 0.4s;
@@ -236,8 +237,161 @@
     border-radius: 60px;
 }
 /* Work experience */
-#footer {
-    height: 5000px;
-    background-color: #ccc;
+.work_exp {
+    display: block;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.work_exp .col2 {
+    display: flex;
+    margin-top: 20px;
 }
 
+.work_exp .exp_sub {
+    width: 100%;
+}
+
+.work_exp strong {
+    font-size: 14px;
+    display: block;
+    padding-bottom: 10px;
+    color: #373737;
+}
+
+.work_exp h3 {
+    display: block;
+    font-weight: 300;
+    font-size: 24px;
+    color: #373737;
+    margin-bottom: 10px;
+}
+
+.work_exp .sub1 {
+    font-size: 18px;
+    padding: 0 0 30px;
+    font-weight: 500;
+    color: #373737;
+    box-sizing: border-box;
+}
+
+.work_exp .sub2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    font-weight: 300;
+}
+
+.work_exp ul {
+    padding-top: 10px;
+    list-style: none;
+}
+
+.work_exp li {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    font-weight: 300;
+    position: relative;
+    padding-left: 30px;
+}
+
+.work_exp ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #373737;
+    box-sizing: border-box;
+}
+/* Lastest works */
+.last_work .work_section {
+    margin: 0 0 40px;
+    padding: 40px 70px 0;
+    box-sizing: border-box;
+    height: 490px;
+    background-color: #F6F8FA;
+}
+
+.last_work .row_work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row_work .col_work_1 {
+    flex: auto;
+    width: 58.33333333%;
+    padding: 20px 120px 0 0;
+}
+
+.col_work_1 h3 {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+    color: #373737;
+    margin: 0 0 30px;
+}
+
+.col_work_1 p {
+    font-size: 19px;
+    margin: 0 0 16px;
+    font-weight: 300;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.row_work .col_work_2 {
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.row_work .col_work_2 img {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.col_work_1 .button_about {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #000;
+    padding: 120px 0;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+#footer .f_section {
+
+}
+
+.f_section span {
+    display: block;
+    color: rgba(255,255,255,0.5);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0 0 20px;
+    letter-spacing: 1px;
+}
+
+.f_section h4 {
+    font-size: 48px;
+    padding: 0 0 8px;
+    color: #fff;
+}
+
+.f_section p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 40px;
+    letter-spacing: 1px;
+}
+
+.f_section .sub_f {
+    margin-top: 97px;
+}
