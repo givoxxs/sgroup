@@ -1,0 +1,64 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    opacity: .8;
+    position: relative;
+    width: 450px;
+    height: 360px;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.text {
+    position: absolute;
+    left: 55px;
+    bottom: 55px;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+.text p {
+    /* position: absolute; */
+    opacity: 0;
+    /* transform: ; */
+}
+
+.wrapper:hover {
+    opacity: 1;
+}
+
+.wrapper:hover .text {
+    bottom: 95px;
+}
+
+.wrapper:hover p {
+    opacity: 1;
+}
+
+.image_wrapper {
+    position: absolute;
+    left: -5%;
+    transition: all .5s ease;
+}
+
+.wrapper:hover .image_wrapper {
+    left: 0;
+}
+
+

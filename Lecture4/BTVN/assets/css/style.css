@@ -1,0 +1,110 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Raleway', Arial, sans-serif; */
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lily {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 1300px;
+}
+
+.wrapper1 {
+    position: relative;
+    overflow: hidden;
+    max-width: 480px;
+    max-height: 360px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(112, 213, 235, 0.5)
+}
+.wrapper1 img {
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    position: relative;
+	display: block;
+	min-height: 100%;
+	width: calc(100% + 40px);
+    transform: translateX(-5%);
+}
+
+.wrapper1:hover img {
+    opacity: 1;
+	transform: translateX(0);
+}
+
+.wrapper1_text {
+    text-align: left;
+    display: block;
+    position: absolute;
+    color: #fff;
+    bottom: 45px;
+    left: 35px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.wrapper1_text h2 {
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.wrapper1_text p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0);
+}
+
+.wrapper1:hover .wrapper1_text {
+    transform: translateY(-24px);
+}
+
+.wrapper1:hover .wrapper1_text p {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* DEXTER */
+.dexter {
+    margin-top: 50px;
+}
+
+.wrapper2{
+    position: relative;
+    overflow: hidden;
+    max-width: 480px;
+    max-height: 360px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(rgba(112, 213, 235, 1) 0%, rgba(112, 213, 235, 1) 100%);
+}
+
+.wrapper2 img {
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    position: relative;
+	display: block;
+	min-height: 100%;
+}
+
+.wrapper2:hover img {
+    opacity: 1;
+    background: linear-gradient(rgba(112, 213, 235, 1) 0%, rgba(112, 213, 235, 1) 100%);
+
+}
+
+
