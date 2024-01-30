@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #2f3238;
 }
 
 .lily {
@@ -34,7 +35,7 @@ body {
 }
 .wrapper1 img {
     opacity: 0.7;
-    transition: all 0.4s ease;
+    transition: all 0.35s ease;
     position: relative;
 	display: block;
 	min-height: 100%;
@@ -54,8 +55,7 @@ body {
     color: #fff;
     bottom: 45px;
     left: 35px;
-    box-sizing: border-box;
-    transition: all 0.4s ease;
+    transition: all 0.35s ease;
     transform: translateY(0);
 }
 
@@ -67,6 +67,7 @@ body {
 .wrapper1_text p {
     font-size: 16px;
     color: rgba(255, 255, 255, 0);
+    transition:  all 0.35s  ease-in;
 }
 
 .wrapper1:hover .wrapper1_text {
@@ -80,10 +81,16 @@ body {
 
 /* DEXTER */
 .dexter {
-    margin-top: 50px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 1300px;
 }
 
-.wrapper2{
+.wrapper2 {
     position: relative;
     overflow: hidden;
     max-width: 480px;
@@ -94,7 +101,7 @@ body {
 }
 
 .wrapper2 img {
-    opacity: 0.7;
+    opacity: 1;
     transition: all 0.4s ease;
     position: relative;
 	display: block;
@@ -103,8 +110,58 @@ body {
 
 .wrapper2:hover img {
     opacity: 1;
-    background: linear-gradient(rgba(112, 213, 235, 1) 0%, rgba(112, 213, 235, 1) 100%);
-
+    /* background: linear-gradient(rgba(112, 213, 235, 1) 0%, rgba(112, 213, 235, 1) 100%); */
 }
 
+.wrapper2_text {
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+}
+
+.wrapper2_text h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.wrapper2_text p {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: all 0.35s ease;
+}
+
+.wrapper2:hover p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wrapper2_text::after {
+    content: '';
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    top: 30px;
+    height: calc(40%);
+    border: 7px solid #fff;
+    transform: translateY(0);
+    transition: all 0.35s ease;
+}
+
+.wrapper2:hover .wrapper2_text::after {
+    transform: translateY(150px);
+}
 
