@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {    
+    width: 500px;
+    height: 500px;
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    background-color: aqua
+}
+
+.content {
+    display: flex;
+    height: 400px;
+}
+
+.sideBar {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+
+.contentMain {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(192, 110, 11);
+}
+
+.main {
+    height: 20%;
+}
+
+.contentItem {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.contentItem div {
+    width: 33.34%;
+    border: solid 1px sandybrown;
+}

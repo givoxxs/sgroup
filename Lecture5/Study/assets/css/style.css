@@ -52,23 +52,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: run2 2s linear infinite;
+    animation: run2 1s linear infinite;
 }
 
 .box_w_2 {
     position: absolute;
     top: 0;
     left: 0;
-    animation: run2 2s linear calc(2s/3) infinite;
-} 
-
-.box_w_3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: run2 2s linear calc(4s/3) infinite;
+    animation: run2 1s linear 0.5s infinite;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-}
+} 
 
 
 
