@@ -1,38 +1,3 @@
-// let a,b,c
-
-// function calc(a, b, c) {
-//     if (a != 0) {
-//         let check = b*b - 4*a*c
-//         let x1 = (-b + Math.sqrt(check))/ (2*a)
-//         let x2 = (-b - Math.sqrt(check)) / (2*a)
-//         if (check > 0) {
-//             return `Có 2 nghiệm phân biệt là ${x1.toFixed(4)} va ${x2.toFixed(4)}`
-//         } else if (check < 0) {
-//             return `Vo nghiem`
-//         } else if (check == 0) {
-//             return `Có nghiệm duy nhất la ${x1.toFixed(4)}`
-//         }
-//     } else {
-//         if (b != 0) {
-//             return `Co nghiem duy nhat ${-c/b}`
-//         } else if (b==0) {
-//             if (c!=0) {
-//                 return `Vo nghiem`
-//             } else {
-//                 return `Vo so nghiem`
-//             }
-//         }
-//     }
-
-// }
-
-// console.log(calc(0,0,2))
-
-// console.log(calc(1,0,0))
-// console.log(calc(0,0,0))
-// console.log(calc(1,2,1))
-// console.log(calc(3,2,1))
-
 function checkNamNhuan(year) {
     if ((year % 4 == 0 && year % 100 != 0 ) || (year % 400 == 0))
         {
