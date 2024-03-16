@@ -23,3 +23,33 @@ async function fetchPokemon2() {
     console.log(data)
 }
 fetchPokemon2()
+
+2. Fetch API with Promise 
+
+function fetchPokemon1() {
+    fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        return fetch(data.species.url);
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        return fetch(data.evolution_chain.url);
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        return fetch(data.chain.species.url);
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => console.log('Error:', error));
+  }
+  
+  fetchPokemon1();
+
+3. 
