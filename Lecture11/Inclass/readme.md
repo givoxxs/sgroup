@@ -1,4 +1,7 @@
-Async & Await
+1. Asysc & await
+
+Code
+
 console.log("Fetch API with Async & Await")
 
 async function fetchPokemon2() {
@@ -19,5 +22,4 @@ async function fetchPokemon2() {
     data = await data.json()
     console.log(data)
 }
-
 fetchPokemon2()
