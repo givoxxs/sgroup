@@ -10,6 +10,8 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-top: 30px;
+    background-color: #ccc;
 }
 
 .item {
@@ -21,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin: 10px 20px;
 }
 
 .img {
@@ -36,7 +39,7 @@ body {
 
 .public {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     width: 100%;
     color: #000;
@@ -53,7 +56,6 @@ body {
 }
 
 .about {
-    margin-top: 20px;
     padding: 0 10px 10px;
     background-color: #f0ead2;
 }
