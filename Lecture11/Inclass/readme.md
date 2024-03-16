@@ -56,3 +56,61 @@ function fetchPokemon1() {
 ```
 
 ## 3. Try & catch
+
+```
+async function fetchPokemon2() {
+    try {
+        let data;
+        data = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+        data = await data.json()
+        console.log(data)
+
+        data = await fetch(data.species.url)
+        data = await data.json()
+        console.log(data)
+
+        data = await fetch(data.evolution_chain.url)
+        data = await data.json()
+        console.log(data)
+
+        data = await fetch(data.chain.species.url)
+        data = await data.json()
+        console.log(data)
+    } catch (error) {
+        console.log('catch', error)
+    }
+}
+
+fetchPokemon2()
+```
+
+## 4. LocalStorage & SessionStorage
+### Local Storage
+- The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year.
+- Example 
+```
+async function fetchPokemon() {
+    let data = localStorage.getItem('pokemon') 
+    try {
+        if (data) data = JSON.parse(data)
+        else {
+            data = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+            data = await data.json()
+
+            localStorage.setItem('pokemon', JSON.stringify(data))
+            console.log(data)
+        }
+    } catch (error) {
+        console.log('Catch', error)
+    }
+}
+
+fetchPokemon()
+```
+- NOTE: Name/value pairs are always stored as strings. Remember to convert them to another format when needed!
+### Session Storage
+The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. The data is deleted when the user closes the specific browser tab.
+```
+sessionStorage.setItem("lastname", "Smith");
+let hey = sessionStorage.getItem("lastname");
+```
