@@ -1,8 +1,6 @@
-1. Asysc & await
+##1. Asysc & await
 
-Code
-
-console.log("Fetch API with Async & Await");
+```console.log("Fetch API with Async & Await");
 
 async function fetchPokemon2() {
     let data;
@@ -22,12 +20,12 @@ async function fetchPokemon2() {
     data = await data.json();
     console.log(data);
 };
-fetchPokemon2();
+fetchPokemon2();```
 
-2. Fetch API with Promise 
+##2. Fetch API with Promise 
 
-let data;
-function fetchPokemon1() {
+
+```function fetchPokemon1() {
     fetch('https://pokeapi.co/api/v2/pokemon/ditto')
       .then(response => response.json())
       .then(data => {
@@ -51,6 +49,6 @@ function fetchPokemon1() {
       .catch(error => console.log('Error:', error));
   }
   
-  fetchPokemon1();
+  fetchPokemon1();```
 
-3. 
+##3. 
