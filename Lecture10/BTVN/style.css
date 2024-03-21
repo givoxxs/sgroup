@@ -10,7 +10,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 30px;
+    padding-top: 30px;
     background-color: #ccc;
 }
 

@@ -25,7 +25,7 @@ async function fetchAPI() {
                 
                 <div class="time">
                     <div class="time-tag">
-                        <span class="tag">${item.category}}</span>
+                        <span class="tag">${item.category}</span>
                     </div>
                     <p><strong>Published at:</strong>${item.publishedAt}</p>
                     <p><strong>Last updated:</strong>${item.updatedAt}</p>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+    <title>Update + Delete FILE</title>
+</head>
+<body>
+    <div class="container">
+        <!-- begin popup create -->
+        <div class="popup-container active">
+            <div class="popup-main">
+                <label for="field-name">Name</label>
+                <input type="text" id="field-name">
+                <label for="field-phone">Phone</label>
+                <input type="text" id="field-phone">
+                <label for="field-email">email</label>
+                <input type="text" id="field-email">
+                <button onclick="onCreate()">Create</button>
+            </div>
+        </div>
+        <!-- end popup create -->
+        <!-- header -->
+        <div class="header">
+            <button id="create-btn">Create</button>
+        </div>
+        <!-- List card -->
+        <div id="cards" class="cards">
+            <div class="card">
+                <div class="card-item">
+                    <img src="./assets/img/icon/contact.svg" alt="">
+                    <span id="name">Van Toan 1</span>
+                </div>
+
+                <div  class="card-item">
+                    <img src="./assets/img/icon/phone.svg" alt="">
+                    <span id="phone">+0123456789</span>
+                </div>
+
+                <div  class="card-item">
+                    <img src="./assets/img/icon/email.svg" alt="">
+                    <span id="mail">abc@gmail.com</span>
+                </div>
+
+                <div class="action">
+                    <img id="edit" src="./assets/img/icon/edit.svg" alt="">
+                    <img id="delete" src="./assets/img/icon/delete.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>
