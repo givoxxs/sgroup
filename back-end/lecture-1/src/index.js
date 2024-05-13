@@ -25,7 +25,7 @@ let users = [
   {
     id: 5,
     name: 'Giáo Phan',
-    age: 100
+    age: 17
   }
 ];
 
@@ -75,7 +75,7 @@ app.delete('/users/:id', checkToken, (req, res) => {
   const userId = parseInt(req.params.id);
   console.log(`DELETE user with id ${userId}`);
   users = users.filter(user => user.id !== userId);
-  res.send(users);
+  res.json(users);
 });
 
 app.listen(PORT, () => {
